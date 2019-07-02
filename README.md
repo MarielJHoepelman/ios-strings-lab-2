@@ -10,6 +10,10 @@ You are given a string stored in variable `problem`. Write code so that you prin
 var problem = "split this string into words and print them on separate lines"
 
 // Your code
+var problem = "split this string into words and print them on separate lines"
+var problemSplit = problem.replacingOccurrences(of: " ", with: "\n")
+print(problemSplit)
+
 ```
 
 Example
@@ -40,6 +44,9 @@ Given a string `testString` create a new variable called `condensedString` that 
 ```swift
 let testString = "  How   about      thesespaces  ?  "
 //condensedString = " How about thesespaces ? "
+
+var condensedString = testString.replacingOccurrences(of: "[ ]+", with: " ", options: .regularExpression)
+print(condensedString)
 ```
 
 
@@ -53,6 +60,13 @@ Sample Input: `"Swift is the best language"`
 
 Sample Output: `"language best the is Swift"`
 
+```swift
+
+let testString = "Swift is the best language"
+var reversed = testString.split(separator: " ").reversed().joined( separator: " ")
+print(reversed)
+```
+
 
 ## Question 4
 
@@ -63,6 +77,20 @@ Example:
 Sample Input: `"danaerys dad cat civic bottle"`
 
 Sample Output: `2`
+
+```swift
+var inputString = "danaerys dad cat civic"
+var inputStringSplit = inputString.split(separator: " ")
+var counter = 0
+
+for w in inputStringSplit {
+    if String(w) == String(w.reversed()) {
+        counter += 1
+    }
+}
+
+print(counter)
+```
 
 
 ## Question 5
@@ -82,6 +110,25 @@ Example:
 Sample Input: `"PPALLP"`
 
 Sample Output: `true`
+
+```swift
+var studentRecord = "APPLLP"
+var consecutiveLs = studentRecord.contains("LL")
+var aCounter = 0
+
+for c in studentRecord {
+    if c == "A" {
+        aCounter+=1
+    }
+}
+
+if aCounter >= 1 && consecutiveLs == true {
+    print("Student shall NOT be rewarded!")
+} else {
+    print("Student shall be rewarded!")
+}
+```
+
 
 
 ## Question 6
