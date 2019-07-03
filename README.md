@@ -146,3 +146,19 @@ Sample Output1: `False`
 Sample Input2: `("aa", "aab")`
 
 Sample Output2: `True`
+
+```swift
+var input1 = ("a", "b")
+if input1.1.contains(input1.0){
+    print("True")
+} else {
+    print("False")
+}
+
+var input2 = ("aa", "baa")
+if input2.1.contains(input2.0){
+    print("True")
+} else {
+    print("False")
+}
+```
